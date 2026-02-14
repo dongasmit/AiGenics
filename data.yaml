@@ -1,0 +1,17 @@
+# AiGenics - TACO Dataset Configuration
+
+# Define the paths to your training and validation image directories.
+# Update these paths based on where your data lives in your cloud environment.
+train: ./data/images/train
+val: ./data/images/val
+
+# Define the number of classes
+nc: 5
+
+# Define the class names in the EXACT order of your TARGET_CLASSES list
+names:
+  0: Plastic
+  1: Metal
+  2: Paper
+  3: Glass
+  4: Trash
