@@ -13,7 +13,7 @@ def train_aigenics_model():
         batch=16,               
         imgsz=640,              
         name='aigenics_taco_v1',
-        device='0'              # Using your cloud GPU
+        device='cpu'              
     )
 
     print("Training complete! Weights saved to runs/detect/aigenics_taco_v1/weights/")
