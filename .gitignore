@@ -1,0 +1,18 @@
+# Ignore datasets and images
+data/
+*.jpg
+*.jpeg
+*.png
+*.mp4
+
+# Ignore trained model weights and training logs
+models/
+runs/
+*.pt
+*.onnx
+
+# Python cache and environments
+__pycache__/
+*.pyc
+.env
+venv/
