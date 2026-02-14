@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await fetch('/api/logs');
+        const response = await fetch('https://aigenics.onrender.com/api/logs');
         const data = await response.json();
         setLogs(data);
         setLoading(false);

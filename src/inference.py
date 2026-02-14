@@ -5,8 +5,8 @@ from ultralytics import YOLO
 def run_smart_bin_inference():
     print("Loading AiGenics Custom Weights...")
     model = YOLO('runs/detect/aigenics_taco_v13/weights/best.pt')
-    API_URL = 'http://127.0.0.1:5000/api/waste'
-    BIN_OBJECT_ID = "69904db6413916c82a5ea286"  
+    API_URL = 'https://aigenics.onrender.com/api/waste'
+    BIN_OBJECT_ID = "6990a64745d56902fb4fd6d3"  
 
     cap = cv2.VideoCapture(0)
     
