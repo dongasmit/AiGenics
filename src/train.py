@@ -1,20 +1,19 @@
 from ultralytics import YOLO
 
 def train_aigenics_model():
-    print("Initializing AiGenics YOLOv8 Training Pipeline...")
+    print("Initializing AiGenics YOLO26 Training Pipeline...")
 
-    # Load a pre-trained Nano model for fast inference on edge devices
-    model = YOLO('yolov8n.pt') 
+    # Load the new YOLO26 pre-trained Nano model
+    model = YOLO('yolo26n.pt') 
 
     # Train the model
-    # Adjust 'epochs' and 'batch' based on your cloud environment's GPU memory
     results = model.train(
-        data='data.yaml',       # Path to our config file
-        epochs=50,              # Start with 50 to check for learning/overfitting
-        batch=16,               # Standard batch size
-        imgsz=640,              # Standard image size for YOLO
-        name='aigenics_taco_v1',# Names the output folder in /runs
-        device='0'              # Forces GPU usage (use 'cpu' if no GPU is available)
+        data='data.yaml',       
+        epochs=50,              
+        batch=16,               
+        imgsz=640,              
+        name='aigenics_taco_v1',
+        device='0'              # Using your cloud GPU
     )
 
     print("Training complete! Weights saved to runs/detect/aigenics_taco_v1/weights/")
