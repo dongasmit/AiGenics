@@ -16,3 +16,4 @@ __pycache__/
 *.pyc
 .env
 venv/aigenics_env/
+aigenics_env/
